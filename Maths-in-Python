@@ -1,0 +1,6 @@
+#Eigen vectors and Eigen values
+eVals, eVecs = la.eig(L) # Gets the eigenvalues and vectors
+order = np.absolute(eVals).argsort()[::-1] # Orders them by their eigenvalues
+eVals = eVals[order]
+eVecs = eVecs[:,order]
+
